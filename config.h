@@ -13,14 +13,14 @@
 #define F_CPU 20000000UL
 #endif
 
-#define TLC5940_N 1            // Number of TLC5940 chips
-#define TLC5940_MULTIPLEX_N 3  // Number of rows driven by one chip
+#define TLC5940_N 1
+#define TLC5940_MULTIPLEX_N 12
 
-#define SIZE_X 4               // Number of LEDs in x direction
+#define SIZE_X 16              // Number of LEDs in x direction
 #define SIZE_Y 4               // Number of LEDs in y direction
-#define SIZE_X_BITS 2          // Number of bits necessary to represent SIZE_X - 1
+#define SIZE_X_BITS 4          // Number of bits necessary to represent SIZE_X - 1
 #define SIZE_Y_BITS 2          // Number of bits nevessary to represent SIZE_Y - 1
-
+´
 /* Pins for multiplexing */
 #define MULTIPLEX_DDR DDRC 
 #define MULTIPLEX_PORT PORTC
@@ -64,17 +64,15 @@
 #define FLAG_EFFECT_MODE_CHANGED 3
 #define FLAG_UART_BIT_9 4
 
-#define AVRSNIPPETS_USE_RANDOM      // Use AVRSnippets random number generator
-#define AVRSNIPPETS_USE_SEED_EEPROM // Use AVRSnippets EEPROM random number seed
+#define AVRSNIPPETS_USE_RANDOM
+#define AVRSNIPPETS_USE_RINGBUFFER
+#define AVRSNIPPETS_USE_SEED_EEPROM
+#define AVRSNIPPETS_USE_SERIAL
 
-#undef AVRSNIPPETS_USE_SERIAL       // Use AVRSnippets serial library
-#undef AVRSNIPPETS_USE_RINGBUFFER   // Use AVRSnippets ringbuffer for serial communication
-
-/* UART settings */
-//#define SERIAL_ENABLE_RX
-//#define SERIAL_ENABLE_RX_INT
-//#define SERIAL_BAUDRATE 250000UL
-//#define SERIAL_CHARSIZE 9
+#define SERIAL_ENABLE_RX
+#define SERIAL_ENABLE_RX_INT
+#define SERIAL_BAUDRATE 250000UL
+#define SERIAL_CHARSIZE 9
 
 /* For convenience */
 #define EFFECT_GS_UPDATE 0

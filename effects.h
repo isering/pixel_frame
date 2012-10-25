@@ -34,9 +34,13 @@
 extern uint8_t mode_changed;
 extern uint16_t wait;
 
+extern uint8_t equ_data[7];
+
 extern void EffectRain();
 extern void EffectShade();
 extern void EffectShadeDark();
+extern void EffectEqualizer2();
+extern void EffectLightOrgan();
 extern void EffectStars();
 
 extern void effect_handle();
